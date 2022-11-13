@@ -91,3 +91,9 @@ data:
     FILE_EXTENSIONS = .adoc,.asciidoc
     RENDER_COMMAND = "asciidoc --out-file=- -"
     IS_INPUT_FILE = false
+
+{% if _gitea_webhook_allowed_host_list in ['loopbak','private','external','*']  %}
+    [webhook]
+    ALLOWED_HOST_LIST = {{ _gitea_webhook_allowed_host_list }}
+    SKIP_TLS_VERIFY = {{ _gitea_webhook_skip_tls_verify | bool }}
+{% endif %}

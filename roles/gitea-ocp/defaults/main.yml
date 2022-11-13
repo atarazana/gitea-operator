@@ -91,3 +91,7 @@ _gitea_user_name: ""
 
 # Actual Gitea user password
 _gitea_actual_user_password: ""
+
+# Gitea Webhook
+_gitea_webhook_allowed_host_list: ""
+_gitea_webhook_skip_tls_verify: false

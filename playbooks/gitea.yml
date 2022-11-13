@@ -88,3 +88,6 @@
       _gitea_mailer_helo_hostname: "{{ gitea_mailer_helo_hostname | default ('') }}"
       _gitea_register_email_confirm: "{{ gitea_register_email_confirm | default(false) | bool }}"
       _gitea_enable_notify_mail: "{{ gitea_enable_notify_mail | default(false) | bool }}"
+
+      _gitea_webhook_allowed_host_list: "{{ gitea_webhook_allowed_host_list | default('') }}"
+      _gitea_webhook_skip_tls_verify: "{{ gitea_webhook_skip_tls_verify | default(false) | bool }}"
