@@ -98,7 +98,7 @@ data:
     SKIP_TLS_VERIFY = {{ _gitea_webhook_skip_tls_verify | bool }}
 {% endif %}
 
-{% if _gitea_migrations_allowed_domains is defined and _gitea_migrations_allowed_domains|length > 0 %}
+{% if _gitea_migrations_allowed_domains is defined %}
     [migrations]
     ALLOWED_DOMAINS = {{ _gitea_migrations_allowed_domains }}
     SKIP_TLS_VERIFY = {{ _gitea_migrations_skip_tls_verify | bool }}
