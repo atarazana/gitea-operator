@@ -97,3 +97,9 @@ data:
     ALLOWED_HOST_LIST = {{ _gitea_webhook_allowed_host_list }}
     SKIP_TLS_VERIFY = {{ _gitea_webhook_skip_tls_verify | bool }}
 {% endif %}
+
+{% if _gitea_migrations_allowed_domains %}
+    [migrations]
+    ALLOWED_HOST_LIST = {{ _gitea_migrations_allowed_domains }}
+    SKIP_TLS_VERIFY = {{ _gitea_migrations_skip_tls_verify | bool }}
+{% endif %}

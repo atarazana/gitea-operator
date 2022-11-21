@@ -19,9 +19,9 @@ metadata:
         }
       ]
     capabilities: Basic Install
-    operators.operatorframework.io/builder: operator-sdk-v1.14.0+git
+    operators.operatorframework.io/builder: operator-sdk-v1.23.0
     operators.operatorframework.io/project_layout: ansible.sdk.operatorframework.io/v1
-  name: gitea-operator.v1.3.0
+  name: gitea-operator.v1.3.3
   namespace: placeholder
 spec:
   apiservicedefinitions: {}
@@ -126,7 +126,9 @@ spec:
           - create
         serviceAccountName: gitea-operator-controller-manager
       deployments:
-      - name: gitea-operator-controller-manager
+      - label:
+          control-plane: controller-manager
+        name: gitea-operator-controller-manager
         spec:
           replicas: 1
           selector:
@@ -158,7 +160,7 @@ spec:
                 env:
                 - name: ANSIBLE_GATHERING
                   value: explicit
-                image: quay.io/gpte-devops-automation/gitea-operator:v1.3.0
+                image: quay.io/atarazana/gitea-operator:v1.3.3
                 livenessProbe:
                   httpGet:
                     path: /healthz
@@ -227,4 +229,4 @@ spec:
     name: Red Hat GPTE
     url: www.redhat.com/partners
   replaces: gitea-operator.v1.2.3
-  version: 1.3.0
+  version: 1.3.3
