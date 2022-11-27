@@ -1,7 +1,7 @@
 #!/bin/bash
 # This shell script builds a new container image for the Gitea Operator
-VERSION=1.3.3
-PREVIOUS_VERSION=1.3.2
+VERSION=1.3.4
+PREVIOUS_VERSION=1.3.3
 QUAY_ID=atarazana
 QUAY_USER=gpte-devops-automation+giteaoperatorbuild
 

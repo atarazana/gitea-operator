@@ -21,7 +21,7 @@ metadata:
     capabilities: Basic Install
     operators.operatorframework.io/builder: operator-sdk-v1.23.0
     operators.operatorframework.io/project_layout: ansible.sdk.operatorframework.io/v1
-  name: gitea-operator.v1.3.3
+  name: gitea-operator.v1.3.4
   namespace: placeholder
 spec:
   apiservicedefinitions: {}
@@ -160,7 +160,7 @@ spec:
                 env:
                 - name: ANSIBLE_GATHERING
                   value: explicit
-                image: quay.io/atarazana/gitea-operator:v1.3.3
+                image: quay.io/atarazana/gitea-operator:v1.3.4
                 livenessProbe:
                   httpGet:
                     path: /healthz
@@ -229,4 +229,4 @@ spec:
     name: Red Hat GPTE
     url: www.redhat.com/partners
   replaces: gitea-operator.v1.2.3
-  version: 1.3.3
+  version: 1.3.4

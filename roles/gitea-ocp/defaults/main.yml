@@ -99,3 +99,8 @@ _gitea_webhook_skip_tls_verify: false
 # Gitea Migrations
 _gitea_migrations_allowed_domains: ""
 _gitea_migrations_skip_tls_verify: false
+
+# Gitea Proxy
+_gitea_proxy_enabled: false
+_gitea_proxy_url: ""
+_gitea_proxy_hosts: ""

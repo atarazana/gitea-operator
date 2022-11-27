@@ -94,3 +94,8 @@
 
       _gitea_migrations_allowed_domains: "{{ gitea_migrations_allowed_domains | default('') }}"
       _gitea_migrations_skip_tls_verify: "{{ gitea_migrations_skip_tls_verify | default(false) | bool }}"
+
+      _gitea_proxy_enabled: "{{ gitea_proxy_enabled | default(false) | bool }}"
+      _gitea_proxy_url: "{{ gitea_proxy_url | default('') }}"
+      _gitea_proxy_hosts: "{{ gitea_proxy_hosts | default('') }}"
+      

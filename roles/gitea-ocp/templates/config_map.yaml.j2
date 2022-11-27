@@ -103,3 +103,10 @@ data:
     ALLOWED_DOMAINS = {{ _gitea_migrations_allowed_domains }}
     SKIP_TLS_VERIFY = {{ _gitea_migrations_skip_tls_verify | bool }}
 {% endif %}
+
+{% if _gitea_proxy_enabled | bool %}
+    [proxy]
+    PROXY_ENABLED = {{ _gitea_proxy_enabled | bool }}
+    PROXY_URL = {{ _gitea_proxy_url }}
+    PROXY_HOSTS = {{ _gitea_proxy_hosts }}
+{% endif %}
